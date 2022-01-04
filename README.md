@@ -9,3 +9,5 @@ English
 Voice recognition service project.
 This project listens to words or phrases spoken, recognizing
 and sending to customers who consume the service.
+
+<img src="https://youtu.be/P74bz2bIgKE">

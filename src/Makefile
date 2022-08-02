@@ -4,7 +4,7 @@ CC=gcc
 SPHINXFLAGS=`pkg-config --cflags --libs pocketsphinx sphinxbase`
 SPHINXLIBS=-DMODELDIR=\"`pkg-config --variable=modeldir pocketsphinx`\"
 
-TARGET=srvOuve
+TARGET=srvouve
 SOURCE= ouve.c
 
 default: all

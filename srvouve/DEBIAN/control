@@ -1,0 +1,10 @@
+Package: srvouve
+Version: 1.0
+Depends:  mysql-common 
+Section: eletronic
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 1024
+Maintainer: maurinsoft.com.br
+Description: srvouve, robotinics project

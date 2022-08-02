@@ -1,0 +1,8 @@
+[Unit]
+Description=srvouve
+
+[Service]
+ExecStart=/usr/bin/srvouve
+
+[Install]
+WantedBy=multi-user.target

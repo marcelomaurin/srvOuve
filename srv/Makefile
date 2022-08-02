@@ -4,6 +4,9 @@ CC=gcc
 SPHINXFLAGS=`pkg-config --cflags --libs pocketsphinx sphinxbase`
 SPHINXLIBS=-DMODELDIR=\"`pkg-config --variable=modeldir pocketsphinx`\"
 
+TARGET=srvOuve
+SOURCE= ouve.c
+
 default: all
 
 all: clean compile install
@@ -14,14 +17,15 @@ clean:
 
 
 compile:
-	$(CC)  ouve.c -g -o SRVOuve $(SPHINXFLAGS) $(SPHINXLIBS)
+	$(CC) $(SOURCE) -g -o $(TARGET) $(SPHINXFLAGS) $(SPHINXLIBS)
 	
 	
 install:
-	cp  ./SRVOuve /usr/local/bin/ 
+	cp  ./$(TARGET) /usr/bin/ 
+	cp ./$(TARGET) ./../srvouve/usr/bin/
 	
 run:
-	/usr/local/bin/srvOuve
+	/usr/bin/$(TARGET)
 
 
 

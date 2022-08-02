@@ -12,7 +12,7 @@ Data: 15/06/2021
 
 
 
-#define PORTSRV 7092
+#define PORTSRV 8097
 
 ps_decoder_t *ps;
 cmd_ln_t *config;

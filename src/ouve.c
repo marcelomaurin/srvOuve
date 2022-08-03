@@ -43,7 +43,7 @@ void Ouvir(char * frase) {
 	decoded_speech = recognize_from_microphone();
 	printf("Hipo: %s\n", hyp);
 	printf("Recognized: %s\n",decoded_speech);
-	
+	sprintf(frase,"%s\n", hyp);
 	printf("Finalizou Ouvir\n");
 }
 
@@ -199,7 +199,9 @@ int main(int argc , char *argv[])
     
 		while(1)
 		{
+			memset(client_message,'\0',sizeof(client_message));
 			Ouvir(client_message);
+			send(client_sock,client_message,strlen(client_message),0);
 			/*
 			//Receive a message from client
 			while( (read_size = recv(client_sock , client_message , 2000 , 0)) > 0 ) {

@@ -51,9 +51,9 @@ void Ouvir(char * frase) {
 int Start_Voice(){
 	
 	config = cmd_ln_init(NULL, ps_args(), TRUE,
-		         "-hmm", MODELDIR "/en-us/en-us",
-		         "-lm", MODELDIR "/en-us/en-us.lm.bin",
-	    		 "-dict", MODELDIR "/en-us/cmudict-en-us.dict",
+		         "-hmm", MODELDIR "./pt_BR",
+		         "-lm", MODELDIR "./cmusphinx-pt-br-5.2/cmusphinx-pt_BR-pt_BR.lm.bin",
+	    		 "-dict", MODELDIR "./cmusphinx-pt-br-5.2/cmudict-pt_BR.dict",
 			 NULL);
     if (config == NULL) {
 	fprintf(stderr, "Failed to create config object, see log for details\n");

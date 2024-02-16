@@ -1,0 +1,2 @@
+﻿  main.cpp
+D:\projetos\maurinsoft\srvOuve\srvwin\srvOuve\main.cpp(1,10): fatal  error C1083: Não é possível abrir arquivo incluir: 'pocketsphinx.h': No such file or directory

@@ -18,7 +18,7 @@ clean:
 
 compile:
 	$(CC) $(SOURCE) -g -o $(TARGET) $(SPHINXFLAGS) $(SPHINXLIBS)
-#	$(CC) teste.c -g -o teste $(SPHINXFLAGS) $(SPHINXLIBS)
+	$(CC) teste.c -g -o teste $(SPHINXFLAGS) $(SPHINXLIBS)
 	g++ -O3 -o ps_boilerplate teste.c $(SPHINXFLAGS) $(SPHINXLIBS)
 #	'pkg-config --cflags --libs pocketsphinx sphinxbase'	
 

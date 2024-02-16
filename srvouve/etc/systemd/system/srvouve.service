@@ -1,8 +1,12 @@
 [Unit]
-Description=srvouve
+Description=server voice to text
+After=network.target
 
 [Service]
 ExecStart=/usr/bin/srvouve
+Restart=always
+User=root
+Group=root
 
 [Install]
 WantedBy=multi-user.target

@@ -4,6 +4,7 @@ Data: 15/06/2021
 */
  
 #include<stdio.h>
+#include <unistd.h>
 #include<string.h>    //strlen
 #include<sys/socket.h>
 #include<arpa/inet.h> //inet_addr
@@ -145,11 +146,34 @@ int Stop_Voice()
     return 0;
 }
 
+void setparametros(int argc, char *argv[]) {
+    int opt;
+    while ((opt = getopt(argc, argv, "vhc:")) != -1) {
+        switch (opt) {
+            case 'v':
+                printf("Opção -v selecionada\n");
+                break;
+            case 'h':
+                printf("Opção -h selecionada\n");
+
+                break;
+            case 'c':
+                printf("Opção -c selecionada com o valor: %s\n", optarg);
+                break;
+            default: /* '?' */
+                fprintf(stderr, "Uso: %s [-v] [-h] [-c valor]\n", argv[0]);
+                exit(EXIT_FAILURE);
+        }
+    }
+}
+
 int main(int argc , char *argv[])
 {
     int socket_desc , client_sock , c , read_size;
     struct sockaddr_in server , client;
     char client_message[2000];
+    // Chamar a função setparametros
+    setparametros(argc, argv);
 
     Start_Voice();
      
